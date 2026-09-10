@@ -1,29 +1,12 @@
-# Satu Data Terorisme — Full Code
+## 📌 Tentang Aplikasi
 
-Paket kode lengkap dashboard **Satu Data Terorisme_prototype**.
+**Satu Data Terorisme (Prototype)** adalah aplikasi dashboard interaktif berbasis web yang dirancang untuk menyajikan data agregat terkait isu terorisme secara visual, terstruktur, dan mudah diakses. 
 
-## Struktur
+Dashboard ini bertujuan untuk mendukung pemantauan, analisis data, serta penyediaan informasi publik/internal secara transparan tanpa menampilkan identitas individu (anonim & aman).
 
-- `dist/index.html` — struktur halaman dashboard
-- `dist/styles.css` — seluruh desain dan tampilan responsif
-- `dist/app.js` — data, grafik, filter, tabel, dan unduhan CSV
-- `dist/ikhub-logo.png` — logo I-KHUB
-- `.openai/hosting.json` — konfigurasi static directory untuk ChatGPT Sites
-
-## Menjalankan secara lokal
-
-Jalankan perintah berikut dari folder proyek:
-
-```bash
-python3 -m http.server 8000 --directory dist
-```
-
-Kemudian buka `http://localhost:8000` pada browser.
-
-Dashboard tidak membutuhkan instalasi paket, database, atau proses build. Semua data agregat dan fungsi antarmuka berada di dalam `dist/app.js`.
-
-## Catatan
-
-- Data yang disajikan bersifat agregat dan tidak memuat identitas individu.
-- Gunakan data resmi yang telah divalidasi sebelum menerapkan pembaruan pada situs produksi.
-- Konfigurasi domain dan DNS dikelola terpisah dari kode aplikasi.
+### 🚀 Fitur Utama
+- **Visualisasi Data & Grafik**: Menyajikan tren dan data statistik terorisme melalui grafik interaktif.
+- **Pencarian & Filter**: Memudahkan pengguna menyaring data berdasarkan kriteria tertentu secara real-time.
+- **Tabel Data Interaktif**: Menampilkan data agregat yang terorganisasi dengan baik.
+- **Ekspor CSV**: Fitur unduh data langsung ke format CSV untuk analisis lebih lanjut.
+- **Ringan & Tanpa Dependency**: Dibuat menggunakan HTML, CSS, dan JavaScript murni (vanilla) tanpa perlu proses *build* atau basis data backend terpisah.
