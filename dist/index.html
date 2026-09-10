@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Dashboard Satu Data Terorisme prototype berdasarkan Laporan Sekretariat Bersama RAN PE 2025 dan data WBP Direktorat Jenderal Pemasyarakatan.">
+  <meta name="theme-color" content="#ffffff">
+  <title>Satu Data Terorisme_prototype</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#konten">Lewati ke konten utama</a>
+
+  <header class="site-header">
+    <a class="brand" href="#konten" aria-label="I-KHUB Indonesia Knowledge Hub">
+      <img class="brand-logo" src="ikhub-logo.png" width="614" height="308" alt="I-KHUB Indonesia Knowledge Hub on Countering Terrorism and Violent Extremism">
+    </a>
+    <nav aria-label="Navigasi utama">
+      <a href="#ringkasan">Ringkasan</a>
+      <a href="#ranpe">RAN PE 2025</a>
+      <a href="#layanan">Katalog data</a>
+      <a href="#pemasyarakatan">Ditjenpas</a>
+      <a href="#wilayah">Wilayah</a>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-button" id="copySummary" type="button" aria-label="Salin ringkasan">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="8" y="8" width="11" height="11" rx="2"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"/></svg>
+      </button>
+      <button class="button primary" id="downloadCsv" type="button">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0 4-4m-4 4-4-4M5 20h14"/></svg>
+        Unduh data WBP
+      </button>
+    </div>
+  </header>
+
+  <main id="konten">
+    <section class="dashboard-head" id="ringkasan" aria-labelledby="page-title">
+      <div>
+        <p class="eyebrow">Prototype</p>
+        <h1 id="page-title">Satu Data <em>Terorisme</em></h1>
+      </div>
+    </section>
+
+    <section class="kpi-grid executive-kpis" aria-label="Ringkasan pelaksanaan Aksi PE tahun 2025">
+      <article class="kpi-card accent-red">
+        <span class="kpi-label">Kegiatan terlaksana</span>
+        <strong>455</strong>
+        <small>kegiatan lintas sektor</small>
+      </article>
+      <article class="kpi-card accent-blue">
+        <span class="kpi-label">Kementerian/Lembaga</span>
+        <strong>48</strong>
+        <small>K/L melaporkan pelaksanaan</small>
+      </article>
+      <article class="kpi-card accent-green">
+        <span class="kpi-label">Aksi PE tahun 2025</span>
+        <strong>104</strong>
+        <small>aksi dalam pedoman transisi</small>
+      </article>
+      <article class="kpi-card accent-yellow">
+        <span class="kpi-label">Tema pelaksanaan</span>
+        <strong>9</strong>
+        <small>tema RAN PE tahun 2025</small>
+      </article>
+    </section>
+
+    <section class="section-heading" id="ranpe">
+      <div><span class="section-number">01</span><div><p>KINERJA LINTAS SEKTOR</p><h2>Sembilan tema RAN PE 2025</h2></div></div>
+      <p>Jumlah kegiatan berdasarkan kompilasi laporan Kementerian/Lembaga.</p>
+    </section>
+
+    <section class="performance-grid">
+      <article class="panel theme-panel" aria-labelledby="theme-chart-title">
+        <div class="panel-head">
+          <div><span class="panel-kicker">DISTRIBUSI PER TEMA</span><h3 id="theme-chart-title">Pelaksanaan Aksi PE</h3></div>
+          <span class="coverage-chip">455 kegiatan</span>
+        </div>
+        <div class="theme-chart" id="themeChart" role="img" aria-label="Grafik sembilan tema RAN PE 2025"></div>
+        <div class="theme-chart-legend"><span><i></i> Tema RAN PE</span><small id="themeChartUnit">Satuan: kegiatan</small></div>
+      </article>
+
+      <aside class="panel highlights-panel" aria-labelledby="highlights-title">
+        <div class="panel-head"><div><span class="panel-kicker">SOROTAN 2025</span><h3 id="highlights-title">Angka utama</h3></div></div>
+        <div class="highlight-list">
+          <article>
+            <span>Output paling dominan</span>
+            <strong>Kapasitas kelembagaan</strong>
+            <b>292 output</b>
+            <small>penguatan institusi pemerintah</small>
+          </article>
+          <article>
+            <span>Kegiatan terbanyak</span>
+            <strong>Tema 1 &amp; 3</strong>
+            <b>69 kegiatan</b>
+            <small>masing-masing tema</small>
+          </article>
+          <article>
+            <span>Capaian implementasi tertinggi</span>
+            <strong>Tema 9</strong>
+            <b>97,73%</b>
+            <small>kemitraan dan kerja sama internasional</small>
+          </article>
+        </div>
+      </aside>
+    </section>
+
+    <section class="output-layout">
+      <article class="panel output-panel" aria-labelledby="output-title">
+        <div class="panel-head">
+          <div><span class="panel-kicker">ENAM INDIKATOR OUTPUT</span><h3 id="output-title">Capaian output kegiatan</h3></div>
+          <span class="coverage-chip">Tahun 2025</span>
+        </div>
+        <div class="output-bars" id="outputBars"></div>
+        <p class="panel-note">Satu kegiatan dapat berkontribusi pada lebih dari satu indikator output.</p>
+      </article>
+      <aside class="panel monev-panel" aria-labelledby="monev-title">
+        <div class="panel-head"><div><span class="panel-kicker">MONITORING RAD PE</span><h3 id="monev-title">Empat provinsi tahun 2025</h3></div></div>
+        <div class="monev-list">
+          <span>01 <strong>Kalimantan Selatan</strong></span>
+          <span>02 <strong>Nusa Tenggara Barat</strong></span>
+          <span>03 <strong>Maluku Utara</strong></span>
+          <span>04 <strong>DI Yogyakarta</strong></span>
+        </div>
+        <p>Monitoring dilakukan bersama pemangku kepentingan pemerintah dan masyarakat di daerah.</p>
+      </aside>
+    </section>
+
+    <section class="section-heading" id="layanan">
+      <div><span class="section-number">02</span><div><p>KATALOG SATU DATA</p><h2>Telusuri tema dan dataset</h2></div></div>
+      <p>Pilih tema untuk melihat jumlah kegiatan, periode, dan sumber data.</p>
+    </section>
+
+    <section class="catalog-shell">
+      <div class="catalog-toolbar">
+        <label class="search-field">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m16 16 4 4"/></svg>
+          <span class="sr-only">Cari tema atau dataset</span>
+          <input id="datasetSearch" type="search" placeholder="Cari tema, sektor, atau kata kunci…">
+        </label>
+        <label class="filter-field">
+          <span class="sr-only">Filter sumber data</span>
+          <select id="datasetFilter">
+            <option value="all">Semua sumber</option>
+            <option value="ranpe">Sekber RAN PE</option>
+            <option value="ditjenpas">Ditjenpas</option>
+          </select>
+        </label>
+        <span class="result-count" id="datasetCount">10 layanan</span>
+      </div>
+      <div class="catalog-layout">
+        <div class="dataset-grid" id="datasetGrid"></div>
+        <aside class="dataset-detail" id="datasetDetail" aria-live="polite"></aside>
+      </div>
+    </section>
+
+    <section class="governance-strip" aria-label="Alur layanan satu data">
+      <div><span>01</span><strong>Produsen data</strong><small>K/L, Pemda, dan mitra</small></div>
+      <i aria-hidden="true">→</i>
+      <div><span>02</span><strong>Validasi sektoral</strong><small>Metadata, periode, dan agregasi</small></div>
+      <i aria-hidden="true">→</i>
+      <div><span>03</span><strong>Integrasi I-KHub</strong><small>Katalog dan pelaporan RAN PE</small></div>
+      <i aria-hidden="true">→</i>
+      <div><span>04</span><strong>Layanan publik</strong><small>Dashboard tanpa data personal</small></div>
+    </section>
+
+    <section class="section-heading" id="pemasyarakatan">
+      <div><span class="section-number">03</span><div><p>DATA WARGA BINAAN PEMASYARAKATAN KASUS TERORISME</p><h2>Warga Binaan Pemasyarakatan</h2></div></div>
+      <p>Posisi WBP kasus terorisme pada setiap bulan; bukan jumlah kumulatif penerimaan sepanjang tahun.</p>
+    </section>
+
+    <section class="module-summary">
+      <article class="panel chart-panel" aria-labelledby="chart-title">
+        <div class="panel-head">
+          <div><span class="panel-kicker">JANUARI-DESEMBER 2025</span><h3 id="chart-title">Posisi WBP per bulan</h3></div>
+          <span class="trend-badge positive">+55,7% Jan-Des</span>
+        </div>
+        <div class="chart-area">
+          <div class="axis-labels" aria-hidden="true"><span>200</span><span>150</span><span>100</span><span>50</span><span>0</span></div>
+          <div id="wbpSnapshotChart" class="snapshot-chart" role="img" aria-label="Grafik posisi WBP kasus terorisme per bulan tahun 2025"></div>
+        </div>
+        <div class="chart-caption"><span><i></i> Posisi WBP</span><small>Satuan: orang</small></div>
+      </article>
+      <aside class="metric-stack">
+        <article class="panel latest-card">
+          <span class="panel-kicker">POSISI DESEMBER 2025</span>
+          <strong>190</strong>
+          <p>WBP kasus terorisme</p>
+          <div><span>9 provinsi</span><span>40 lapas</span></div>
+        </article>
+        <article class="panel gender-card">
+          <div class="gender-donut" id="genderDonut" role="img" aria-label="Komposisi gender Desember 2025: 187 laki-laki dan 3 perempuan"></div>
+          <div><span class="panel-kicker">KOMPOSISI GENDER</span><div class="gender-legend" id="genderLegend"></div></div>
+        </article>
+      </aside>
+    </section>
+
+    <section class="panel monthly-panel" aria-labelledby="monthly-title">
+      <div class="table-top">
+        <div><span class="panel-kicker">12 REKAP BULANAN</span><h3 id="monthly-title">Tabel posisi nasional</h3></div>
+        <button class="table-download" id="downloadTable" type="button">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0 4-4m-4 4-4-4M5 20h14"/></svg>
+          Unduh CSV
+        </button>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th scope="col">Bulan</th><th scope="col" class="number">Laki-laki</th><th scope="col" class="number">Perempuan</th><th scope="col" class="number">Jumlah WBP</th><th scope="col" class="number">Perubahan</th></tr></thead>
+          <tbody id="snapshotTable"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="section-heading" id="wilayah">
+      <div><span class="section-number">04</span><div><p>POSISI DESEMBER 2025</p><h2>Sebaran provinsi dan lapas</h2></div></div>
+      <p>Pilih provinsi untuk memfilter rincian UPT Pemasyarakatan.</p>
+    </section>
+
+    <section class="region-layout">
+      <article class="panel region-overview" aria-labelledby="region-title">
+        <div class="panel-head">
+          <div><span class="panel-kicker">SEBARAN WILAYAH</span><h3 id="region-title">WBP per provinsi</h3></div>
+          <span class="coverage-chip">9 provinsi</span>
+        </div>
+        <div class="region-list" id="regionCards"></div>
+        <p class="region-footnote">Angka menunjukkan jumlah WBP pada posisi Desember 2025.</p>
+      </article>
+      <article class="panel facility-panel" aria-labelledby="facility-title">
+        <div class="table-top">
+          <div><span class="panel-kicker">RINCIAN UPT</span><h3 id="facility-title">Daftar lapas</h3><span id="facilityCount">40 lapas ditampilkan</span></div>
+          <label class="filter-field">Provinsi
+            <select id="provinceFilter" aria-label="Filter lapas berdasarkan provinsi">
+              <option value="all">Semua provinsi</option>
+            </select>
+          </label>
+        </div>
+        <div class="table-wrap facility-wrap">
+          <table class="facility-table">
+            <thead><tr><th scope="col">Provinsi</th><th scope="col">Lapas</th><th scope="col" class="number">Laki-laki</th><th scope="col" class="number">Perempuan</th><th scope="col" class="number">Total WBP</th></tr></thead>
+            <tbody id="facilityTable"></tbody>
+          </table>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <p>Satu Data Terorisme_prototype · I-KHUB</p>
+  </footer>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="app.js"></script>
+</body>
+</html>
